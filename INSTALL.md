@@ -15,18 +15,20 @@ $ brew install imagemagick
 $ pip3 install google-cloud-vision
 ```
 
-For the interfacing with Google, you'll need the API keys. 
+For interfacing with Google, you'll need the API keys. 
 [Vision Client Libraries  |  Cloud Vision API  |  Google Cloud](https://cloud.google.com/vision/docs/libraries#client-libraries-install-python)
 
-change the following to point to where you've stored your API key
+change the following in notes2devonthink.sh to point to where you've stored your API key
+```
 export GOOGLE_APPLICATION_CREDENTIALS=$HOME/.gcpdn/gcpdn.key
+```
 
 To test whether you have everything installed, here is what you can try
 
 ```
 $ pipenv install --three
 $ pipenv shell
-# cd to where you donwloaded the rockebook code
+# cd to where you downloaded the rockebook code
 $ python3 handwriting_ocr.py images/sample_note-000.jpg
 - This is
 an
