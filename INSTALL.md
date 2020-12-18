@@ -41,3 +41,10 @@ handwriting recognition
 ```
 
 If you get an output similar to the above, you have everything installed. 
+If you don't have Devonthink on your Mac , comment out the last line of
+notes2devonthink.sh
+You'll have a pdf file in the output directory, that contains your scan as well
+as the output from Google. 
+
+
+
