@@ -46,6 +46,7 @@ done
 
 cur_date=$(date '+%m-%d-%Y_%H_%m_%S')
 # Merge the Rockebook pdf + New pdf with OCR'ed content
-cpdf -merge "$1" $fname*-annotated.pdf  -o $OUTDIR/$filename
+#cpdf -merge "$1" $fname*-annotated.pdf  -o $OUTDIR/$filename
+gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=$OUTDIR/$filename "$1" $fname*-annotated.pdf 
 
 $PGMDIR/import_to_devonthink.py $OUTDIR/$filename
